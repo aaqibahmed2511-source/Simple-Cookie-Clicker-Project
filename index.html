@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2 class="shop-title">Power-Ups</h2>
+        
+        <div class="shop-item">
+            <div class="item-header">
+                <h3>3x Click</h3>
+                <span class="cost">50</span>
+            </div>
+            <button class="shop-button" id="buy-triple">Buy</button>
+            <span class="owned" id="owned-triple"></span>
+        </div>
+        
+        <div class="shop-item">
+            <div class="item-header">
+                <h3>2x Boost</h3>
+                <span class="cost">100</span>
+            </div>
+            <button class="shop-button" id="buy-multiplier">Buy Once</button>
+            <span class="owned" id="owned-multiplier"></span>
+        </div>
+        
+        <div class="shop-item">
+            <div class="item-header">
+                <h3>Passive</h3>
+                <span class="cost">50</span>
+            </div>
+            <button class="shop-button" id="buy-passive">Buy</button>
+            <span class="owned" id="owned-passive"></span>
+        </div>
+    </div>
+    
+    <div class="main">
+        <h1 class="heading">Cookie Clicker!</h1>
+        <div class="score-board">
+            <p class="counter"><span id="click-count">0</span></p>
+            <p class="per-second" id="per-second"></p>
+        </div>
+        <div class="cookie-wrapper">
+            <p id="cookie" class="cookie">🍪</p>
+        </div>
+    </div>
+    
+    <button class="reset-button" id="reset-btn">Reset</button>
+</body>
+</html>

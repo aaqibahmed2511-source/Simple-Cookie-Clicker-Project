@@ -1,0 +1,224 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #ffffff;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 250px;
+    background: #000000;
+    color: white;
+    padding: 2rem 1.5rem;
+    overflow-y: auto;
+    border-right: 2px solid #333;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.reset-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #000000;
+    border: 2px solid #000000;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.reset-button:hover {
+    background: #333333;
+}
+
+.reset-button:active {
+    transform: scale(0.95);
+}
+
+.heading {
+    font-size: 5rem;
+    margin: 0;
+    color: #000000;
+}
+
+.score-board {
+    background: #000000;
+    padding: 2rem 3rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid #000000;
+}
+
+.counter {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: bold;
+    color: white;
+}
+
+.per-second {
+    font-size: 0.9rem;
+    color: #cccccc;
+    margin: 0.8rem 0 0 0;
+}
+
+.cookie-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.cookie {
+    font-size: 200px;
+    cursor: pointer;
+    transition: transform 0.1s ease-out;
+    background-color: white;
+    border-radius: 50%;
+    user-select: none;
+}
+
+.cookie:hover {
+    transform: scale(1.05);
+}
+
+.cookie:active {
+    transform: scale(0.95);
+}
+
+.cookie.clicked {
+    animation: cookieClick 0.6s ease-out;
+}
+
+@keyframes cookieClick {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.85) rotate(-5deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.crumb {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999;
+}
+
+@keyframes fallCrumb {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(var(--tx), var(--ty)) scale(0.3);
+    }
+}
+
+.shop-title {
+    margin: 0 0 1.5rem 0;
+    text-align: center;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.shop-item {
+    background: #1a1a1a;
+    padding: 1.2rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border: 1px solid #333333;
+    transition: transform 0.3s ease;
+}
+
+.shop-item:hover {
+    transform: translateX(5px);
+    border-color: #555555;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.shop-item h3 {
+    margin: 0;
+    color: white;
+    font-size: 1rem;
+}
+
+.cost {
+    font-weight: bold;
+    color: white;
+    font-size: 0.85rem;
+    background: #333333;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+}
+
+.shop-button {
+    width: 100%;
+    padding: 0.7rem;
+    background: white;
+    color: black;
+    border: 1px solid white;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.85rem;
+}
+
+.shop-button:hover:not(:disabled) {
+    background: #cccccc;
+}
+
+.shop-button:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+.shop-button:disabled {
+    background: #666666;
+    color: #999999;
+    cursor: not-allowed;
+    border-color: #666666;
+}
+
+.owned {
+    display: none;
+    margin-top: 0.6rem;
+    font-size: 0.75rem;
+    color: #aaaaaa;
+    font-weight: bold;
+}
+
+:root {
+    --body-color: #ffffff; 
+}
