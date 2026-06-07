@@ -58,7 +58,7 @@ body {
 
 .heading {
     text-align: center;
-    font-size: 5rem;
+    font-size: 5vw;
     margin: 0;
     color: #000000;
 }
@@ -155,9 +155,9 @@ body {
 
 .shop-item {
     background: #1a1a1a;
-    padding: 1.2rem;
+    padding: 1.2vw;
     border-radius: 8px;
-    margin-bottom: 1rem;
+    margin-bottom: 1vh;
     border: 1px solid #333333;
     transition: transform 0.3s ease;
 }
@@ -171,27 +171,27 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.8vh;
 }
 
 .shop-item h3 {
     margin: 0;
     color: white;
-    font-size: 1rem;
+    font-size: 2vw;
 }
 
 .cost {
     font-weight: bold;
     color: white;
-    font-size: 0.85rem;
+    font-size: 1.7vw;
     background: #333333;
-    padding: 0.3rem 0.6rem;
+    padding: 0.3vw 0.6vw;
     border-radius: 4px;
 }
 
 .shop-button {
     width: 100%;
-    padding: 0.7rem;
+    padding: 0.7vw;
     background: white;
     color: black;
     border: 1px solid white;
@@ -199,7 +199,7 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.2s ease;
-    font-size: 0.85rem;
+    font-size: 1.7vw;
 }
 
 .shop-button:hover:not(:disabled) {
@@ -219,8 +219,8 @@ body {
 
 .owned {
     display: none;
-    margin-top: 0.6rem;
-    font-size: 0.75rem;
+    margin-top: 0.6vw;
+    font-size: 0.75vw;
     color: #aaaaaa;
     font-weight: bold;
 }
